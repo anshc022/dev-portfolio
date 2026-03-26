@@ -1,103 +1,58 @@
-// ============================================
-// THEME TOGGLE
-// ============================================
-const themeToggle = document.getElementById('themeToggle');
-const icon = themeToggle.querySelector('.theme-toggle__icon');
-
-const savedTheme = localStorage.getItem('theme') || 'dark';
-document.documentElement.setAttribute('data-theme', savedTheme);
-icon.textContent = savedTheme === 'dark' ? '☀' : '☾';
-
-themeToggle.addEventListener('click', () => {
-  const current = document.documentElement.getAttribute('data-theme');
-  const next = current === 'dark' ? 'light' : 'dark';
-  document.documentElement.setAttribute('data-theme', next);
-  localStorage.setItem('theme', next);
-  icon.textContent = next === 'dark' ? '☀' : '☾';
-});
-
-// ============================================
-// MOBILE NAV
-// ============================================
-const burger = document.getElementById('burger');
-const nav = document.getElementById('nav');
-
-burger.addEventListener('click', () => {
-  nav.classList.toggle('nav--open');
-});
-
-document.querySelectorAll('.nav__links a').forEach(link => {
-  link.addEventListener('click', () => nav.classList.remove('nav--open'));
-});
-
-// ============================================
-// NAV SCROLL EFFECT
-// ============================================
-window.addEventListener('scroll', () => {
-  nav.style.background = window.scrollY > 20
-    ? 'rgba(10,10,15,0.95)'
-    : 'rgba(10,10,15,0.7)';
-}, { passive: true });
-
-// ============================================
-// FADE-UP ANIMATIONS
-// ============================================
-const fadeEls = document.querySelectorAll(
-  '.section__header, .about__text, .about__cards, .about__card, .skill-group, .project-card, .contact__info, .contact__form'
-);
-
-fadeEls.forEach(el => el.classList.add('fade-up'));
+// Scroll reveal
+const reveals = document.querySelectorAll('.bcard, .pcard, .contact__left, .contact__right, .projects__header, .bento__grid');
+reveals.forEach(el => el.classList.add('reveal'));
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry, i) => {
     if (entry.isIntersecting) {
-      setTimeout(() => {
-        entry.target.classList.add('visible');
-      }, 60 * (entry.target.dataset.delay || 0));
+      setTimeout(() => entry.target.classList.add('visible'), i * 60);
       observer.unobserve(entry.target);
     }
   });
-}, { threshold: 0.12 });
+}, { threshold: 0.08 });
 
-fadeEls.forEach((el, i) => {
-  el.dataset.delay = i % 4;
-  observer.observe(el);
-});
+reveals.forEach(el => observer.observe(el));
 
-// ============================================
-// CONTACT FORM
-// ============================================
+// Contact form
 document.getElementById('contactForm').addEventListener('submit', (e) => {
   e.preventDefault();
-  const btn = e.target.querySelector('button[type="submit"]');
-  btn.textContent = 'Sending...';
+  const btn = e.target.querySelector('button');
+  btn.textContent = 'sending... 📡';
   btn.disabled = true;
   setTimeout(() => {
-    btn.textContent = 'Message Sent!';
-    btn.style.background = 'linear-gradient(135deg, #4ade80, #22c55e)';
+    btn.textContent = 'sent! talk soon 🎉';
+    btn.style.background = '#39ff14';
+    btn.style.color = '#000';
+    btn.style.boxShadow = '0 0 20px rgba(57,255,20,0.4)';
     e.target.reset();
     setTimeout(() => {
-      btn.textContent = 'Send Message';
+      btn.textContent = 'send it 🚀';
       btn.disabled = false;
       btn.style.background = '';
+      btn.style.color = '';
+      btn.style.boxShadow = '';
     }, 3000);
   }, 1000);
 });
 
-// ============================================
-// ACTIVE NAV LINK
-// ============================================
+// Active nav highlight
+const navLinks = document.querySelectorAll('.nav__pill a');
 const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav__links a');
 
-const sectionObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      navLinks.forEach(link => link.style.color = '');
-      const active = document.querySelector(`.nav__links a[href="#${entry.target.id}"]`);
-      if (active) active.style.color = 'var(--accent)';
+const sectionObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      navLinks.forEach(l => {
+        l.style.background = '';
+        l.style.color = '';
+      });
+      const a = document.querySelector(`.nav__pill a[href="#${e.target.id}"]`);
+      if (a) {
+        a.style.background = 'rgba(255,60,172,0.12)';
+        a.style.color = '#ff3cac';
+      }
     }
   });
-}, { rootMargin: '-50% 0px -50% 0px' });
+}, { rootMargin: '-40% 0px -40% 0px' });
 
-sections.forEach(s => sectionObserver.observe(s));
+sections.forEach(s => sectionObs.observe(s));
