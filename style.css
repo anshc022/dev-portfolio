@@ -56,6 +56,37 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* ============================================
+   SCROLL LABEL
+   ============================================ */
+.scroll-label {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(20,20,20,0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 7px 14px;
+  font-size: 0.72rem;
+  font-family: 'Fira Code', monospace;
+  color: var(--muted);
+  pointer-events: none;
+  transition: opacity 0.4s;
+}
+
+.scroll-label__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--pink);
+  animation: pulse-green 1.5s ease-in-out infinite;
+}
+
+/* ============================================
    NAV
    ============================================ */
 .hero, .bento, .projects, .contact, .footer {
@@ -136,11 +167,12 @@ a { color: inherit; text-decoration: none; }
   min-height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 120px 40px 80px;
+  justify-content: flex-start;
+  padding: 120px 40px 80px max(40px, calc(50vw - 540px));
   position: relative;
-  text-align: center;
+  text-align: left;
   overflow: hidden;
+  max-width: 55vw;
 }
 
 .hero__noise {
@@ -220,6 +252,7 @@ a { color: inherit; text-decoration: none; }
   text-transform: uppercase;
   color: var(--muted);
   margin-bottom: 24px;
+  text-align: left;
 }
 
 .hero__title {
@@ -254,7 +287,7 @@ a { color: inherit; text-decoration: none; }
 .hero__actions {
   display: flex;
   gap: 12px;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
 
