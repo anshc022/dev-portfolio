@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ansh — Software Engineer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav__logo">ansh<span class="accent">.</span></div>
+    <ul class="nav__links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+      <span class="theme-toggle__icon">☀</span>
+    </button>
+    <button class="nav__burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero__bg">
+      <div class="blob blob--1"></div>
+      <div class="blob blob--2"></div>
+      <div class="grid-lines"></div>
+    </div>
+    <div class="hero__content">
+      <p class="hero__eyebrow"><span class="dot"></span> Available for work</p>
+      <h1 class="hero__title">
+        Hi, I'm <span class="gradient-text">Ansh</span><br />
+        Software Engineer
+      </h1>
+      <p class="hero__sub">
+        I build fast, scalable, and thoughtfully designed software —<br class="br-desktop" />
+        from backend systems to polished user interfaces.
+      </p>
+      <div class="hero__cta">
+        <a href="#projects" class="btn btn--primary">View My Work</a>
+        <a href="#contact" class="btn btn--ghost">Let's Talk</a>
+      </div>
+      <div class="hero__stats">
+        <div class="stat"><span class="stat__num">3+</span><span class="stat__label">Years Exp.</span></div>
+        <div class="stat__divider"></div>
+        <div class="stat"><span class="stat__num">20+</span><span class="stat__label">Projects</span></div>
+        <div class="stat__divider"></div>
+        <div class="stat"><span class="stat__num">10+</span><span class="stat__label">Happy Clients</span></div>
+      </div>
+    </div>
+    <div class="hero__visual">
+      <div class="code-window">
+        <div class="code-window__bar">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+        </div>
+        <pre class="code-window__body"><code><span class="kw">const</span> <span class="fn">engineer</span> = {
+  name<span class="punct">:</span> <span class="str">"Ansh"</span>,
+  role<span class="punct">:</span> <span class="str">"Software Engineer"</span>,
+  stack<span class="punct">:</span> [
+    <span class="str">"TypeScript"</span>, <span class="str">"React"</span>,
+    <span class="str">"Node.js"</span>, <span class="str">"Python"</span>,
+    <span class="str">"PostgreSQL"</span>, <span class="str">"Docker"</span>
+  ],
+  passion<span class="punct">:</span> <span class="str">"Building things that matter"</span>,
+  available<span class="punct">:</span> <span class="kw">true</span>
+}<span class="punct">;</span></code></pre>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag">01 / About</span>
+        <h2 class="section__title">Who I Am</h2>
+      </div>
+      <div class="about__grid">
+        <div class="about__text">
+          <p>I'm a software engineer who loves turning complex problems into elegant, performant solutions. My journey started with curiosity about how things work under the hood — and that curiosity never stopped.</p>
+          <p>I specialize in full-stack development, building everything from REST APIs and microservices to interactive web apps. I care deeply about code quality, developer experience, and shipping products users actually love.</p>
+          <p>When I'm not coding, I contribute to open source, explore new technologies, and occasionally write about software architecture.</p>
+          <a href="#" class="btn btn--outline" download>Download CV</a>
+        </div>
+        <div class="about__cards">
+          <div class="about__card">
+            <div class="about__card-icon">⚡</div>
+            <h3>Performance</h3>
+            <p>I obsess over load times, query optimization, and smooth UX.</p>
+          </div>
+          <div class="about__card">
+            <div class="about__card-icon">🏗</div>
+            <h3>Architecture</h3>
+            <p>Clean, scalable systems designed to grow with your product.</p>
+          </div>
+          <div class="about__card">
+            <div class="about__card-icon">🔒</div>
+            <h3>Security</h3>
+            <p>Security-first thinking baked into every layer of the stack.</p>
+          </div>
+          <div class="about__card">
+            <div class="about__card-icon">🤝</div>
+            <h3>Collaboration</h3>
+            <p>Clear communication, thorough code reviews, team-first mindset.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="section section--alt" id="skills">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag">02 / Skills</span>
+        <h2 class="section__title">My Stack</h2>
+      </div>
+      <div class="skills__grid">
+        <div class="skill-group">
+          <h3 class="skill-group__title">Frontend</h3>
+          <div class="skill-tags">
+            <span class="tag">React</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">Next.js</span>
+            <span class="tag">Tailwind CSS</span>
+            <span class="tag">Vite</span>
+            <span class="tag">Redux</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3 class="skill-group__title">Backend</h3>
+          <div class="skill-tags">
+            <span class="tag">Node.js</span>
+            <span class="tag">Python</span>
+            <span class="tag">Express</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">GraphQL</span>
+            <span class="tag">REST APIs</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3 class="skill-group__title">Database & Cloud</h3>
+          <div class="skill-tags">
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">MongoDB</span>
+            <span class="tag">Redis</span>
+            <span class="tag">AWS</span>
+            <span class="tag">Docker</span>
+            <span class="tag">Kubernetes</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3 class="skill-group__title">Tools & Practices</h3>
+          <div class="skill-tags">
+            <span class="tag">Git</span>
+            <span class="tag">CI/CD</span>
+            <span class="tag">Linux</span>
+            <span class="tag">Jest</span>
+            <span class="tag">Figma</span>
+            <span class="tag">Agile</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag">03 / Projects</span>
+        <h2 class="section__title">What I've Built</h2>
+      </div>
+      <div class="projects__grid">
+
+        <article class="project-card project-card--featured">
+          <div class="project-card__meta">
+            <span class="project-card__year">2024</span>
+            <div class="project-card__links">
+              <a href="#" aria-label="GitHub" class="icon-link">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+              <a href="#" aria-label="Live demo" class="icon-link">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-card__title">DevFlow — Developer Productivity Suite</h3>
+          <p class="project-card__desc">A full-stack platform for engineering teams to track sprints, review PRs, and monitor deployment health — all in one dashboard.</p>
+          <div class="project-card__tags">
+            <span class="tag tag--sm">React</span>
+            <span class="tag tag--sm">Node.js</span>
+            <span class="tag tag--sm">PostgreSQL</span>
+            <span class="tag tag--sm">Docker</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card__meta">
+            <span class="project-card__year">2024</span>
+            <div class="project-card__links">
+              <a href="#" aria-label="GitHub" class="icon-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg></a>
+              <a href="#" aria-label="Live" class="icon-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            </div>
+          </div>
+          <h3 class="project-card__title">SwiftStore API</h3>
+          <p class="project-card__desc">High-performance e-commerce REST API handling 10k+ req/sec with Redis caching, JWT auth, and Stripe integration.</p>
+          <div class="project-card__tags">
+            <span class="tag tag--sm">Python</span>
+            <span class="tag tag--sm">FastAPI</span>
+            <span class="tag tag--sm">Redis</span>
+            <span class="tag tag--sm">AWS</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card__meta">
+            <span class="project-card__year">2023</span>
+            <div class="project-card__links">
+              <a href="#" aria-label="GitHub" class="icon-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg></a>
+              <a href="#" aria-label="Live" class="icon-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            </div>
+          </div>
+          <h3 class="project-card__title">Realtime Chat Engine</h3>
+          <p class="project-card__desc">WebSocket-based chat system with rooms, presence indicators, message history, and end-to-end encryption support.</p>
+          <div class="project-card__tags">
+            <span class="tag tag--sm">TypeScript</span>
+            <span class="tag tag--sm">Socket.io</span>
+            <span class="tag tag--sm">MongoDB</span>
+            <span class="tag tag--sm">React</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-card__meta">
+            <span class="project-card__year">2023</span>
+            <div class="project-card__links">
+              <a href="#" aria-label="GitHub" class="icon-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg></a>
+              <a href="#" aria-label="Live" class="icon-link"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+            </div>
+          </div>
+          <h3 class="project-card__title">CLI Task Manager</h3>
+          <p class="project-card__desc">A blazing-fast terminal task manager with tagging, priorities, deadlines, and sync across devices via a lightweight API.</p>
+          <div class="project-card__tags">
+            <span class="tag tag--sm">Go</span>
+            <span class="tag tag--sm">SQLite</span>
+            <span class="tag tag--sm">REST</span>
+            <span class="tag tag--sm">CLI</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section__header">
+        <span class="section__tag">04 / Contact</span>
+        <h2 class="section__title">Get In Touch</h2>
+      </div>
+      <div class="contact__grid">
+        <div class="contact__info">
+          <p class="contact__lead">Have a project in mind or want to collaborate? I'd love to hear from you.</p>
+          <div class="contact__links">
+            <a href="mailto:ansh@example.com" class="contact__link">
+              <span class="contact__link-icon">✉</span>
+              ansh@example.com
+            </a>
+            <a href="https://github.com" class="contact__link" target="_blank">
+              <span class="contact__link-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              </span>
+              github.com/ansh
+            </a>
+            <a href="https://linkedin.com" class="contact__link" target="_blank">
+              <span class="contact__link-icon">in</span>
+              linkedin.com/in/ansh
+            </a>
+          </div>
+        </div>
+        <form class="contact__form" id="contactForm">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="your@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="4" placeholder="Tell me about your project..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy">Designed & built by <span class="accent">Ansh</span> — 2024</p>
+      <p class="footer__made">Made with curiosity & coffee ☕</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
