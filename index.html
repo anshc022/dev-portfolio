@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@400;500;600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
 </head>
 <body>
 
@@ -27,6 +28,9 @@
       <span class="status-dot"></span> open to work
     </div>
   </nav>
+
+  <!-- Loading hint -->
+  <div class="scroll-label" id="loadingHint">loading model... 0%</div>
 
   <!-- Scroll hint label -->
   <div class="scroll-label" id="scrollLabel">
@@ -257,26 +261,14 @@
   <!-- CONTACT -->
   <section class="contact" id="contact">
     <div class="container">
-      <div class="contact__inner">
-        <div class="contact__left">
-          <p class="section__eyebrow">don't be shy</p>
-          <h2 class="contact__title">Let's build<br />something <em>wild.</em></h2>
-          <p class="contact__sub">Got a project? A collab idea? Just want to talk about why async/await is beautiful? I'm in. 📩</p>
+      <div class="contact__simple">
+        <p class="section__eyebrow">don't be shy</p>
+        <h2 class="contact__title">Let's build<br />something <em>wild.</em></h2>
+        <p class="contact__sub">Got a project? A collab idea? Just want to talk about why async/await is beautiful? I'm in. 📩</p>
+        <div class="contact__buttons">
           <a href="mailto:ansh@example.com" class="btn btn--hot btn--lg">ansh@example.com</a>
-        </div>
-        <div class="contact__right">
-          <form class="cform" id="contactForm">
-            <div class="cform__group">
-              <input type="text" placeholder="your name 👋" required />
-            </div>
-            <div class="cform__group">
-              <input type="email" placeholder="your email 📧" required />
-            </div>
-            <div class="cform__group">
-              <textarea rows="4" placeholder="tell me everything 👂" required></textarea>
-            </div>
-            <button type="submit" class="btn btn--hot btn--full">send it 🚀</button>
-          </form>
+          <a href="https://github.com/anshc022" target="_blank" class="btn btn--outline btn--lg">GitHub ↗</a>
+          <a href="#" target="_blank" class="btn btn--outline btn--lg">LinkedIn ↗</a>
         </div>
       </div>
     </div>
